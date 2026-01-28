@@ -1,11 +1,11 @@
 // This file handles interactions with the GitHub API to fetch and display projects from your GitHub account.
 
-const githubUsername = 'Kossouurio'; // Replace with your GitHub username
+const gitHubUsername = 'Kossouurio'; // Replace with your GitHub username
 const projectsContainer = document.getElementById('projects-container'); // Ensure this element exists in your HTML
 
 async function fetchGitHubProjects() {
     try {
-        const response = await fetch(`https://api.github.com/users/${githubUsername}/repos`);
+        const response = await fetch(`https://api.github.com/users/${gitHubUsername}/repos`);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }

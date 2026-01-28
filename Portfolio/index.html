@@ -3,33 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Ilan KONAN - Game Developer Portfolio</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">IK</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
+
     <main>
-        <section>
-            <h2>Featured Projects</h2>
-            <div id="project-list">
-                <!-- Projects will be dynamically loaded here -->
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <span class="hero-greeting">Hello, I'm</span>
+                <h1 class="hero-title">Ilan KONAN</h1>
+                <p class="hero-subtitle">Game Developer <span class="accent">|</span> C/C++/C# Specialist</p>
+                <p class="hero-description">I craft engaging video games and interactive experiences using modern game engines and custom development techniques.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                </div>
+                <div class="hero-scroll">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-indicator"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Who I Am</span>
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">I'm a passionate game developer with deep expertise in C/C++/C# programming languages.</p>
+                        <p>My focus is on creating engaging and immersive video game experiences using industry-standard game engines and custom development techniques. With a strong foundation in game development and proficiency in core programming languages, I've created multiple game projects and interactive experiences.</p>
+                        <p>I'm experienced with modern game engines and best practices in game architecture, gameplay programming, and performance optimization.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section section-dark">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag">What I Do</span>
+                    <h2>Core Skills</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">💻</div>
+                        <h3>Programming Languages</h3>
+                        <ul class="skill-list">
+                            <li>C++ (Advanced)</li>
+                            <li>C# (Advanced)</li>
+                            <li>C (Proficient)</li>
+                            <li>Memory Management</li>
+                            <li>OOP & Design Patterns</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🎮</div>
+                        <h3>Game Development</h3>
+                        <ul class="skill-list">
+                            <li>Game Architecture</li>
+                            <li>Gameplay Programming</li>
+                            <li>Physics & Collision</li>
+                            <li>Graphics & Rendering</li>
+                            <li>Game Mechanics Design</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">⚙️</div>
+                        <h3>Engines & Tools</h3>
+                        <ul class="skill-list">
+                            <li>Unity (C#)</li>
+                            <li>Custom Engine Dev</li>
+                            <li>Shader Programming</li>
+                            <li>Debugging & Profiling</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🛠️</div>
+                        <h3>Dev Practices</h3>
+                        <ul class="skill-list">
+                            <li>Git Version Control</li>
+                            <li>Visual Studio / VSCode</li>
+                            <li>Build Systems</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>Code Architecture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag">My Work</span>
+                    <h2>Featured Projects</h2>
+                </div>
+                <div id="projects-container" class="projects-grid">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section section-dark">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag">Let's Talk</span>
+                    <h2>Get in Touch</h2>
+                    <p class="section-subtitle">Have a project in mind or want to collaborate ? I'd love to hear from you!</p>
+                </div>
+                
+                <div class="contact-wrapper">
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/mdagjdvn" method="POST">
+                        <input type="hidden" name="_subject" value="New message from Portfolio">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <h3>Other Ways to Connect</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/Kossouurio" target="_blank" class="social-link">
+                                <span class="social-icon">📂</span>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ilan-konan" target="_blank" class="social-link">
+                                <span class="social-icon">💼</span>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="mailto:ilankonan7@gmail.com" class="social-link email-link" onclick="event.preventDefault(); navigator.clipboard.writeText('ilankonan7@gmail.com').then(() => { let tooltip = this.querySelector('.copy-tooltip'); tooltip.classList.add('show'); setTimeout(() => tooltip.classList.remove('show'), 1400); }).catch(() => { window.location.href = 'mailto:ilankonan7@gmail.com'; });">
+                                <span class="social-icon">✉️</span>
+                                <span>ilankonan7@gmail.com</span>
+                                <span class="copy-tooltip">Copied !</span>
+                            </a>
+                        </div>
+                        <a href="path/to/your-cv.pdf" target="_blank" class="btn btn-outline btn-full">Download CV</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2023 Kossouurio. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 Ilan KONAN. Crafted with passion & code.</p>
+        </div>
     </footer>
+
     <script src="js/github.js"></script>
     <script src="js/main.js"></script>
 </body>
