@@ -26,9 +26,9 @@ Portfolio
 ## Setup Instructions
 
 1. Navigate to this link:
-   ```
+   
    [https://github.com/Kossouurio/Portfolio/](https://kossouurio.github.io/Portfolio/)
-   ```
+
 
 ## Features
 
