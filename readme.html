@@ -260,11 +260,12 @@
     </footer>
 
     <script>
-        const gitHubUsername = 'Kossouurio';
+        const defaultGitHubUsername = 'Kossouurio';
 
         async function loadProjectDetails() {
             const urlParams = new URLSearchParams(window.location.search);
             const repoName = urlParams.get('repo');
+            const repoOwner = urlParams.get('owner') || defaultGitHubUsername;
 
             if (!repoName) {
                 showError('No project specified');
@@ -273,7 +274,7 @@
 
             try {
                 // Fetch repo details
-                const repoResponse = await fetch(`https://api.github.com/repos/${gitHubUsername}/${repoName}`);
+                const repoResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}`);
                 if (!repoResponse.ok) throw new Error('Repository not found');
                 const repo = await repoResponse.json();
 
@@ -298,7 +299,7 @@
                 `;
 
                 // Fetch and render README
-                const readmeResponse = await fetch(`https://api.github.com/repos/${gitHubUsername}/${repoName}/readme`);
+                const readmeResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/readme`);
                 if (readmeResponse.ok) {
                     const readmeData = await readmeResponse.json();
                     

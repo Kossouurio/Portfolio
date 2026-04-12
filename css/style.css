@@ -422,6 +422,67 @@ nav.scrolled {
     align-items: stretch;
 }
 
+.projects-toolbar {
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.projects-sort-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+}
+
+.projects-sort {
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%),
+        rgba(0, 0, 0, 0.35);
+    color: var(--text-white);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    padding: 9px 44px 9px 14px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--primary-color) 50%),
+        linear-gradient(135deg, var(--primary-color) 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(50% - 3px),
+        calc(100% - 14px) calc(50% - 3px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    transition: var(--transition);
+}
+
+.projects-sort:hover {
+    border-color: rgba(255, 215, 0, 0.45);
+    box-shadow: 0 8px 18px rgba(255, 215, 0, 0.15);
+}
+
+.projects-sort:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+}
+
+.projects-sort option {
+    color: var(--text-white);
+    background: #181818;
+}
+
 .project-card {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -487,6 +548,7 @@ nav.scrolled {
     font-size: 0.95rem;
     line-height: 1.6;
     display: -webkit-box;
+    line-clamp: 3;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -804,6 +866,14 @@ footer p {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .projects-toolbar {
+        margin-top: 14px;
+        width: 100%;
+        justify-content: center;
+        border-radius: 16px;
+        flex-wrap: wrap;
+    }
+
     .about-stats {
         flex-direction: column;
     }
@@ -832,6 +902,10 @@ footer p {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .projects-sort {
+        width: 100%;
     }
 }
 
