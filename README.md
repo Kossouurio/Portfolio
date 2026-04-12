@@ -1,54 +1,54 @@
 # Portfolio - Ilan KONAN
 
-Portfolio personnel orienté Game Development, réalisé en HTML, CSS et JavaScript.
+Personal game development portfolio built with HTML, CSS, and JavaScript.
 
-Version en ligne: [https://kossouurio.github.io/Portfolio/](https://kossouurio.github.io/Portfolio/)
+Live version: [https://kossouurio.github.io/Portfolio/](https://kossouurio.github.io/Portfolio/)
 
-## Apercu
+## Overview
 
-Ce site presente:
+This website includes:
 
-- Une page d'accueil complete (hero, about, skills, contact)
-- Une section Featured Projects chargee dynamiquement
-- Un tri cote utilisateur des projets
-- Une page detail par projet avec affichage du README GitHub
+- A complete landing page (hero, about, skills, contact)
+- A dynamically loaded Featured Projects section
+- Client-side project sorting
+- A project details page with GitHub README rendering
 
-## Fonctionnalites
+## Features
 
-- Chargement des projets depuis [assets/projects.json](assets/projects.json)
-- Enrichissement via API GitHub (description, stars, language, date, etc.)
-- Fallback robuste: les cartes restent affichables meme si l'API GitHub est indisponible
-- Tri disponible dans l'interface:
+- Loads featured projects from [assets/projects.json](assets/projects.json)
+- Enriches project data using the GitHub API (description, stars, language, updated date, etc.)
+- Robust fallback: cards still render even if the GitHub API is unavailable
+- Available sort options in the UI:
    - Default
    - Alphabetical (A-Z)
    - Most recent
    - Language
    - Label
-- Affichage du type de projet sur les cartes (base sur label/type du JSON)
-- Navigation vers une page detail via [readme.html](readme.html)
+- Displays a project type badge on each card (based on label/type in JSON)
+- Links each card to a dedicated details page: [readme.html](readme.html)
 
-## Structure Du Projet
+## Project Structure
 
 ```
 Portfolio
 ├── assets/
 │   ├── fonts/
-│   └── projects.json        # Configuration des projets affiches
+│   └── projects.json        # Featured projects configuration
 ├── css/
 │   ├── reset.css
 │   └── style.css
 ├── documents/
 ├── js/
-│   ├── github.js            # Chargement/tri/rendu des projets
-│   └── main.js              # Animations et interactions globales
-├── index.html               # Page principale
-├── readme.html              # Page detail projet
+│   ├── github.js            # Project loading, sorting, and rendering logic
+│   └── main.js              # Global animations and interactions
+├── index.html               # Main page
+├── readme.html              # Project details page
 └── README.md
 ```
 
-## Configuration Des Projets
+## Projects Configuration
 
-Les projets affiches sont definis dans [assets/projects.json](assets/projects.json):
+Featured projects are defined in [assets/projects.json](assets/projects.json):
 
 ```json
 {
@@ -62,49 +62,49 @@ Les projets affiches sont definis dans [assets/projects.json](assets/projects.js
 }
 ```
 
-Champs pris en charge:
+Supported fields:
 
-- `url` (obligatoire)
-- `label` (recommande pour le type affiche sur la carte)
-- `type` (supporte aussi comme alternative a `label`)
-- `description` (optionnel)
-- `demoUrl` (optionnel)
-- `imageUrl` (optionnel)
+- `url` (required)
+- `label` (recommended, used as project type)
+- `type` (also supported as an alternative to `label`)
+- `description` (optional)
+- `demoUrl` (optional)
+- `imageUrl` (optional)
 
-## Lancer Le Projet En Local
+## Run Locally
 
-Option simple avec VS Code Live Server:
+Simple option with VS Code Live Server:
 
-1. Ouvrir le dossier du projet
-2. Lancer un serveur local sur [index.html](index.html)
+1. Open the project folder
+2. Start a local server from [index.html](index.html)
 
-Option terminal:
+Terminal option:
 
-1. Depuis la racine du projet, executer:
+1. From the project root, run:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-2. Ouvrir ensuite:
+2. Open:
 
 ```text
 http://localhost:8000
 ```
 
-## Stack Technique
+## Tech Stack
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
+- Vanilla JavaScript
 - GitHub REST API
-- Marked.js (rendu markdown dans [readme.html](readme.html))
+- Marked.js (Markdown rendering in [readme.html](readme.html))
 
 ## Notes
 
-- Le projet ne necessite pas de build step ni de dependances npm.
-- Pour eviter les limites API GitHub, une strategie de fallback est deja integree.
+- No build step or npm dependencies are required.
+- A fallback strategy is already implemented to reduce issues caused by GitHub API limits.
 
-## Licence
+## License
 
-Ce projet est distribue sous licence MIT.
+This project is released under the MIT License.
