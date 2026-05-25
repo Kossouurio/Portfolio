@@ -70,6 +70,11 @@ Supported fields:
 - `description` (optional)
 - `demoUrl` (optional)
 - `imageUrl` (optional)
+- `youtubeUrl` (optional, shows a YouTube button on the project card)
+
+YouTube previews
+
+- If a repository contains an `assets/youtube.md` file with a YouTube link, iframe snippet, or video id, the site will embed the video directly in the project card. If `assets/youtube.md` is absent or invalid, the project image is used instead.
 
 ## Run Locally
 
@@ -102,6 +107,7 @@ http://localhost:8000
 
 ## Notes
 
+- No local video previews are used; project previews are images only.
 - No build step or npm dependencies are required.
 - A fallback strategy is already implemented to reduce issues caused by GitHub API limits.
 
