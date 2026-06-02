@@ -84,6 +84,9 @@ function getLocalRepoPreviewCandidates(projectName) {
         if (!variant) continue;
         paths.push(
             `${variant}/assets/preview.png`,
+            `${variant}/Assets/preview.png`,
+            `${variant}/assets/preview.svg`,
+            `${variant}/Assets/preview.svg`,
         );
     }
 
@@ -172,6 +175,9 @@ async function getGlobalPreviewImage() {
     if (_cachedGlobalPreviewImage !== undefined) return _cachedGlobalPreviewImage;
     const candidates = [
         buildLocalAssetUrl('assets/preview.png'),
+        buildLocalAssetUrl('assets/preview.svg'),
+        buildLocalAssetUrl('Assets/preview.png'),
+        buildLocalAssetUrl('Assets/preview.svg'),
     ];
     for (const url of candidates) {
         if (await tryLoadImage(url)) {
@@ -194,7 +200,13 @@ async function getRepoPreviewImage(project) {
     // Prefer remote raw.githubusercontent.com (few, common locations) to minimize calls
     const remoteCandidates = [
         `https://raw.githubusercontent.com/${gitHubUsername}/${project.name}/main/assets/preview.png`,
+        `https://raw.githubusercontent.com/${gitHubUsername}/${project.name}/main/assets/preview.svg`,
+        `https://raw.githubusercontent.com/${gitHubUsername}/${project.name}/main/Assets/preview.png`,
+        `https://raw.githubusercontent.com/${gitHubUsername}/${project.name}/main/Assets/preview.svg`,
         `https://raw.githubusercontent.com/${gitHubUsername}/${project.name}/master/assets/preview.png`,
+        `https://raw.githubusercontent.com/${gitHubUsername}/${project.name}/master/assets/preview.svg`,
+        `https://raw.githubusercontent.com/${gitHubUsername}/${project.name}/master/Assets/preview.png`,
+        `https://raw.githubusercontent.com/${gitHubUsername}/${project.name}/master/Assets/preview.svg`,
     ];
 
     for (const url of remoteCandidates) {
